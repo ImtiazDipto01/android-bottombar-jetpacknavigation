@@ -1,11 +1,14 @@
 <resources>
-  <string name="app_name">FeedMeNav</string>
-  <string name="title_pizza">Pizza</string>
-  <string name="title_cake">Cake</string>
-  <string name="monster">Monster!</string>
-  <string name="feed_me_pizza">Feed Me Pizza!</string>
-  <string name="i_want_cake">I Want Cake!</string>
-  <string name="slug">Slug!</string>
-  <string name="cake">Cake!</string>
-  <string name="pizza">Pizza!</string>
+    <string name="app_name">FeedMeNav</string>
+    <string name="title_pizza">Pizza</string>
+    <string name="title_cake">Cake</string>
+    <string name="monster">Monster!</string>
+    <string name="feed_me_pizza">Feed Me Pizza!</string>
+    <string name="i_want_cake">I Want Cake!</string>
+    <string name="slug">Slug!</string>
+    <string name="cake">Cake!</string>
+    <string name="pizza">Pizza!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

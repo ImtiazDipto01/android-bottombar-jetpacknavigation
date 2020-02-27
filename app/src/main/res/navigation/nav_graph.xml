@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navToChooseRecepientFragment">
+    <fragment
+        android:id="@+id/navToChooseRecepientFragment"
+        android:name="com.example.bottombarwithnavigation.NavToChooseRecepientFragment"
+        android:label="fragment_nav_to_choose_recepient"
+        tools:layout="@layout/fragment_nav_to_choose_recepient" >
+        <action
+            android:id="@+id/action_navToChooseRecepientFragment_to_navToSepecifyAmountFragment"
+            app:destination="@id/navToSepecifyAmountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navToViewBalanceFragment"
+        android:name="com.example.bottombarwithnavigation.NavToViewBalanceFragment"
+        android:label="fragment_nav_to_view_balance"
+        tools:layout="@layout/fragment_nav_to_view_balance" />
+    <fragment
+        android:id="@+id/navToViewTransactionFragment"
+        android:name="com.example.bottombarwithnavigation.NavToViewTransactionFragment"
+        android:label="fragment_view_transaction"
+        tools:layout="@layout/fragment_view_transaction" />
+    <fragment
+        android:id="@+id/navToConfirmationFragment"
+        android:name="com.example.bottombarwithnavigation.NavToConfirmationFragment"
+        android:label="fragment_nav_to_confirmation"
+        tools:layout="@layout/fragment_nav_to_confirmation" />
+    <fragment
+        android:id="@+id/navToSepecifyAmountFragment"
+        android:name="com.example.bottombarwithnavigation.NavToSepecifyAmountFragment"
+        android:label="fragment_nav_to_sepecify_amount"
+        tools:layout="@layout/fragment_nav_to_sepecify_amount" >
+        <action
+            android:id="@+id/action_navToSepecifyAmountFragment_to_navToConfirmationFragment"
+            app:destination="@id/navToConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navToMainFragment"
+        android:name="com.example.bottombarwithnavigation.NavToMainFragment"
+        android:label="NavToMainFragment" >
+        <action
+            android:id="@+id/action_navToMainFragment_to_navToViewTransactionFragment"
+            app:destination="@id/navToViewTransactionFragment" />
+        <action
+            android:id="@+id/action_navToMainFragment_to_navToChooseRecepientFragment"
+            app:destination="@id/navToChooseRecepientFragment" />
+        <action
+            android:id="@+id/action_navToMainFragment_to_navToViewBalanceFragment"
+            app:destination="@id/navToViewBalanceFragment" />
+    </fragment>
+</navigation>
