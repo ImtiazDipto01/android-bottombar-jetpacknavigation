@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/navToMainFragment">
+
     <fragment
         android:id="@+id/navToChooseRecepientFragment"
         android:name="com.example.bottombarwithnavigation.NavToChooseRecepientFragment"
@@ -11,23 +12,32 @@
         tools:layout="@layout/fragment_nav_to_choose_recepient" >
         <action
             android:id="@+id/action_navToChooseRecepientFragment_to_navToSepecifyAmountFragment"
-            app:destination="@id/navToSepecifyAmountFragment" />
+            app:destination="@id/navToSepecifyAmountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
+
     <fragment
         android:id="@+id/navToViewBalanceFragment"
         android:name="com.example.bottombarwithnavigation.NavToViewBalanceFragment"
         android:label="fragment_nav_to_view_balance"
         tools:layout="@layout/fragment_nav_to_view_balance" />
+
     <fragment
         android:id="@+id/navToViewTransactionFragment"
         android:name="com.example.bottombarwithnavigation.NavToViewTransactionFragment"
         android:label="fragment_view_transaction"
         tools:layout="@layout/fragment_view_transaction" />
+
     <fragment
         android:id="@+id/navToConfirmationFragment"
         android:name="com.example.bottombarwithnavigation.NavToConfirmationFragment"
         android:label="fragment_nav_to_confirmation"
         tools:layout="@layout/fragment_nav_to_confirmation" />
+
+
     <fragment
         android:id="@+id/navToSepecifyAmountFragment"
         android:name="com.example.bottombarwithnavigation.NavToSepecifyAmountFragment"
@@ -35,20 +45,43 @@
         tools:layout="@layout/fragment_nav_to_sepecify_amount" >
         <action
             android:id="@+id/action_navToSepecifyAmountFragment_to_navToConfirmationFragment"
-            app:destination="@id/navToConfirmationFragment" />
+            app:destination="@id/navToConfirmationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <argument
+            android:name="recipient"
+            android:defaultValue="None"/>
+
     </fragment>
+
+
     <fragment
         android:id="@+id/navToMainFragment"
         android:name="com.example.bottombarwithnavigation.NavToMainFragment"
         android:label="NavToMainFragment" >
         <action
             android:id="@+id/action_navToMainFragment_to_navToViewTransactionFragment"
-            app:destination="@id/navToViewTransactionFragment" />
+            app:destination="@id/navToViewTransactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_navToMainFragment_to_navToChooseRecepientFragment"
-            app:destination="@id/navToChooseRecepientFragment" />
+            app:destination="@id/navToChooseRecepientFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_navToMainFragment_to_navToViewBalanceFragment"
-            app:destination="@id/navToViewBalanceFragment" />
+            app:destination="@id/navToViewBalanceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 </navigation>

@@ -49,8 +49,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintVertical_bias=".4"
-        app:layout_constraintRight_toLeftOf="@+id/cancel_btn"
-        android:id="@+id/next_btn"
+        app:layout_constraintRight_toLeftOf="@+id/cancelBtn"
+        android:id="@+id/nextBtn"
         android:text="next"
         />
 
@@ -60,9 +60,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/next_btn"
+        app:layout_constraintLeft_toRightOf="@+id/nextBtn"
         app:layout_constraintVertical_bias=".4"
-        android:id="@+id/cancel_btn"
+        android:id="@+id/cancelBtn"
         android:text="cancel"
         />
 
