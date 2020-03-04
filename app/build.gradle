@@ -25,6 +25,10 @@ android {
 
 }
 
+androidExtensions {
+    experimental = true
+}
+
 dependencies {
 
     def nav_version = "2.2.1"

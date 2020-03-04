@@ -18,7 +18,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="$1 was sent to Mitch"
         android:textSize="25sp"
-        android:id="@+id/confirmation_message"
+        android:id="@+id/confirmationMessage"
         />
 
 

@@ -35,7 +35,13 @@
         android:id="@+id/navToConfirmationFragment"
         android:name="com.example.bottombarwithnavigation.NavToConfirmationFragment"
         android:label="fragment_nav_to_confirmation"
-        tools:layout="@layout/fragment_nav_to_confirmation" />
+        tools:layout="@layout/fragment_nav_to_confirmation">
+
+        <argument
+            android:name="allValue"
+            app:argType="com.example.bottombarwithnavigation.Value"/>
+
+    </fragment>
 
 
     <fragment

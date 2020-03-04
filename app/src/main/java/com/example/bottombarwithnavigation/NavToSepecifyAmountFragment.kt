@@ -2,10 +2,12 @@ package com.example.bottombarwithnavigation
 
 import android.os.Bundle
 import android.os.IBinder
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_nav_to_sepecify_amount.*
@@ -17,7 +19,7 @@ class NavToSepecifyAmountFragment : Fragment(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        recipient = arguments?.getString("") ?: ""
+        recipient = arguments?.getString("recipient") ?: ""
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -29,8 +31,7 @@ class NavToSepecifyAmountFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         initInstance(view)
         initListener()
-
-
+        tvRecipient.text = "Sending Money To $recipient"
     }
 
     private fun initInstance(view: View) {
@@ -46,7 +47,12 @@ class NavToSepecifyAmountFragment : Fragment(), View.OnClickListener {
         if(v != null){
             when(v.id){
                 R.id.cancelBtn -> activity?.onBackPressed()
-                R.id.sendBtn -> {navController.navigate(R.id.action_navToSepecifyAmountFragment_to_navToConfirmationFragment, null)}
+                R.id.sendBtn -> {
+                    val valueObj = Value(recipient!!, inputAmount.text.toString())
+                    val bundle = bundleOf(
+                        "allValue" to valueObj)
+                    navController.navigate(R.id.action_navToSepecifyAmountFragment_to_navToConfirmationFragment, bundle)
+                }
             }
         }
     }
